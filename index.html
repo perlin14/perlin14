@@ -152,6 +152,262 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-搭建自己Hexo博客的步骤以及踩过得坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/05/搭建自己Hexo博客的步骤以及踩过得坑/">搭建自己Hexo博客的步骤以及踩过的坑</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/05/搭建自己Hexo博客的步骤以及踩过得坑/" class="archive-article-date">
+  	<time datetime="2019-07-05T02:59:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Hexo博客的本地搭建"><a href="#一、Hexo博客的本地搭建" class="headerlink" title="一、Hexo博客的本地搭建"></a>一、Hexo博客的本地搭建</h2><hr>
+<p>选择博客框架：Hexo<br>操作系统：Ubuntu16.04</p>
+<hr>
+<h4 id="1、部署环境"><a href="#1、部署环境" class="headerlink" title="1、部署环境"></a>1、部署环境</h4><ul>
+<li><p><font color="black" size="3">安装nodejs,下载长期支持版：Recommended For Most Users这个版本，<a href="https://nodejs.org" target="_blank" rel="noopener">下载链接</a></font></p>
+<img src="/images/pasted-1.png" width="700" height="500" div align="center">
+</li>
+<li><p><font color="black" size="3">然后打开命令行，进入下载的目录执行如下命令，解压缩到 /usr/local目录下：</font></p>
+<blockquote>
+<p>sudo tar xf node-v10.15.3-linux-x64.tar.xz -C            /usr/local/</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">进入 /usr/local文件夹</font></p>
+<blockquote>
+<p>cd /usr/local</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">将解压缩的文件重命名为nodejs</font></p>
+<blockquote>
+<p>sudo mv node-v10.15.3-linux-x64/ nodejs</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">链接nodejs本身  </font></p>
+</li>
+<li><p>链接npm包管理器</p>
+<blockquote>
+<p>sudo ln -s /usr/local/nodejs/bin/node /usr/local/bin<br>sudo ln -s /usr/local/nodejs/bin/npm /usr/local/bin</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">查看nodejs的版本信息</font></p>
+<blockquote>
+<p>node -v  </p>
+</blockquote>
+<p>————v10.15.3        </p>
+</li>
+<li><p><font color="black" size="3">查看npm的版本信息</font></p>
+<blockquote>
+<p>npm -v</p>
+</blockquote>
+<p>————-6.4.1</p>
+</li>
+<li><p><font color="black" size="3">下载安装cnpm（速度比较快）</font></p>
+<blockquote>
+<p>sudo npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">尝试输入 cnpm 查看是否安装成功，<br>如果成功，会显示根目录下的文件夹或者文件，<br>如果失败，则继续输入（查看cnpm安装的位置）：</font></p>
+<blockquote>
+<p>sudo find / -name cnpm</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">链接cnpm</font></p>
+<blockquote>
+<p>sudo ln -s /usr/local/nodejs/lib/node_modules/cnpm/bin/cnpm /usr/local/bin/cnpm  </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">查看安装cnpm的版本信息</font></p>
+<blockquote>
+<p>cnpm -v</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">使用cnpm来安装hexo博客框架</font></p>
+<blockquote>
+<p>sudo cnpm install -g hexo-cli </p>
+</blockquote>
+</li>
+</ul>
+<p>至此Hexo博客的基本环境已经部署好了。  </p>
+<hr>
+<h4 id="2、初始化博客"><a href="#2、初始化博客" class="headerlink" title="2、初始化博客"></a>2、初始化博客</h4><ul>
+<li><p><font color="black" size="3">打开命令行，选择一个文件夹，创建你的博客存储文件夹（以后关于博客的书写删除，还有样式的配置等都在这个文件夹下操作）</font></p>
+<blockquote>
+<p>sudo mkdir Hexoblog<br>cd Hexoblog</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">初始化一个博客</font></p>
+<blockquote>
+<p>sudo hexo init</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">启动hexo（可以预览）</font></p>
+<blockquote>
+<p>sudo hexo s </p>
+</blockquote>
+</li>
+</ul>
+<p>此时会在本地生成一个地址<a href="http://localhost:4000/，在本地浏览器打开就可以看到默认生成的一个名为Hello的博客" target="_blank" rel="noopener">http://localhost:4000/，在本地浏览器打开就可以看到默认生成的一个名为Hello的博客</a>  </p>
+<hr>
+<h4 id="3、写博客"><a href="#3、写博客" class="headerlink" title="3、写博客"></a>3、写博客</h4><ul>
+<li><p><font color="black" size="3">命令行输入：（Hexo博客目录下会生成一个名为”我的第一篇博客文章”的博客，内容空）</font></p>
+<blockquote>
+<p>cd Hexoblog<br>sudo hexo n “我的第一篇博客文章”</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">进入Hexoblog/source/_posts文件下查看是否有 我的第一篇博客文章.md 文件</font></p>
+<blockquote>
+<p>cd source/_posts/</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">打开并开始编写内容（基于markdown语法）</font></p>
+<blockquote>
+<p>sudo gedit 我的第一篇博客文章.md</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">编写完成后退回到blog文件夹下，并使用命令行  清理</font></p>
+<blockquote>
+<p>sudo hexo clean</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">生成博客    </font></p>
+<blockquote>
+<p>sudo hexo g    </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">重新启动</font></p>
+<blockquote>
+<p>sudo hexo s</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="3、把个人博客部署到远端-Github"><a href="#3、把个人博客部署到远端-Github" class="headerlink" title="3、把个人博客部署到远端(Github)"></a>3、把个人博客部署到远端(Github)</h4><ul>
+<li><p><font color="black" size="3">打开个人的Github主页，点击加号选择新建一个仓库（New repository）</font></p>
+<blockquote>
+<p>sudo hexo g    </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">仓库的命名必须和自己的github账户一致（eg:AriesPengLin.github.io)</font></p>
+<blockquote>
+<p>sudo hexo g    </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">然后点击创建仓库（Create repository）</font></p>
+<blockquote>
+<p>sudo hexo g    </p>
+</blockquote>
+</li>
+</ul>
+<p><font color="black" size="3">打开命令行进入部署博客的文件夹下（我这里是Hexoblog/）</font></p>
+<ul>
+<li><p><font color="black" size="3">下载安装git的部署插件，命令为：</font></p>
+<blockquote>
+<p>sudo cnpm install –save hexo-deployer-git    </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">设置目录下的 _config.yml 文件 </font></p>
+<blockquote>
+<p>sudo vim _config.yml</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">找到最底部的 # Deployment 配置项，在type后配置(冒号后面有空格)</font></p>
+<blockquote>
+<p>type: git<br>repo: <a href="https://github.com/perlin14/perlin14.github.io.git" target="_blank" rel="noopener">https://github.com/perlin14/perlin14.github.io.git</a><br>branch: master       </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">使用命令行部署到远端：</font></p>
+<blockquote>
+<p>sudo hexllllo d</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">报错： spawn git ENOENT</font></p>
+<blockquote>
+<p>配置git环境 <a href="https://blog.csdn.net/idomyway/article/details/81975980" target="_blank" rel="noopener">https://blog.csdn.net/idomyway/article/details/81975980</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="五、如何给博客换主题"><a href="#五、如何给博客换主题" class="headerlink" title="五、如何给博客换主题"></a>五、如何给博客换主题</h4><ul>
+<li><p><font color="black" size="3">浏览器输入网址查看样式：</font></p>
+<blockquote>
+<p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">打开命令行：在blog目录下下载主题</font></p>
+<blockquote>
+<p>sudo git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">完成后打开_config.yml文件，修改theme项后面的参数，将landscape换成yilia</font></p>
+<blockquote>
+<p>sudo vim _config.yml</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">然后执行</font></p>
+<blockquote>
+<p>sodu hexo clean<br>sudo hexo g<br>sudo hexo s  </p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">查看完后，推到远端</font></p>
+<blockquote>
+<p>sudo hexo d  </p>
+</blockquote>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/05/搭建自己Hexo博客的步骤以及踩过得坑/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-测试文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -437,7 +693,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://github.com/perlin14" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>我的Github</a>
             </li>
           
             <li class="search-li">
@@ -468,7 +724,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;不忘初心</div>
   	  	
     	</section>
     
