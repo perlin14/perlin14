@@ -15,12 +15,25 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一、Hexo博客的本地搭建 选择博客框架：Hexo操作系统：Ubuntu16.04  1、部署环境 安装nodejs,下载长期支持版：Recommended For Most Users这个版本，下载链接   然后打开命令行，进入下载的目录执行如下命令，解压缩到 /usr/local目录下：  sudo tar xf node-v10.15.3-linux-x64.tar.xz -C">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/pasted-1.png">
-<meta property="og:updated_time" content="2019-07-05T07:20:21.547Z">
+<meta property="og:image" content="http://yoursite.com/images/pasted-4.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-5.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-7.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-6.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-8.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-9.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-10.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-12.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-11.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-13.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-14.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-15.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-16.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-17.png">
+<meta property="og:updated_time" content="2019-07-07T15:16:44.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建自己Hexo博客的步骤以及踩过的坑">
 <meta name="twitter:description" content="一、Hexo博客的本地搭建 选择博客框架：Hexo操作系统：Ubuntu16.04  1、部署环境 安装nodejs,下载长期支持版：Recommended For Most Users这个版本，下载链接   然后打开命令行，进入下载的目录执行如下命令，解压缩到 /usr/local目录下：  sudo tar xf node-v10.15.3-linux-x64.tar.xz -C">
-<meta name="twitter:image" content="http://yoursite.com/images/pasted-1.png">
+<meta name="twitter:image" content="http://yoursite.com/images/pasted-4.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -176,52 +189,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、Hexo博客的本地搭建"><a href="#一、Hexo博客的本地搭建" class="headerlink" title="一、Hexo博客的本地搭建"></a>一、Hexo博客的本地搭建</h2><hr>
+        <h3 id="一、Hexo博客的本地搭建"><a href="#一、Hexo博客的本地搭建" class="headerlink" title="一、Hexo博客的本地搭建"></a>一、Hexo博客的本地搭建</h3><hr>
 <p>选择博客框架：Hexo<br>操作系统：Ubuntu16.04</p>
 <hr>
 <h4 id="1、部署环境"><a href="#1、部署环境" class="headerlink" title="1、部署环境"></a>1、部署环境</h4><ul>
 <li><p><font color="black" size="3">安装nodejs,下载长期支持版：Recommended For Most Users这个版本，<a href="https://nodejs.org" target="_blank" rel="noopener">下载链接</a></font></p>
-<img src="/images/pasted-1.png" width="700" height="500" div align="center">
+<img src="/images/pasted-4.png" width="700" height="500" div align="center">
 </li>
 <li><p><font color="black" size="3">然后打开命令行，进入下载的目录执行如下命令，解压缩到 /usr/local目录下：</font></p>
 <blockquote>
 <p>sudo tar xf node-v10.15.3-linux-x64.tar.xz -C            /usr/local/</p>
 </blockquote>
 </li>
-<li><p><font color="black" size="3">进入 /usr/local文件夹</font></p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-5.png" alt="upload successful">  </p>
+<ul>
+<li><font color="black" size="3">进入 /usr/local文件夹</font><blockquote>
 <p>cd /usr/local</p>
 </blockquote>
 </li>
-<li><p><font color="black" size="3">将解压缩的文件重命名为nodejs</font></p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-7.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">将解压缩的文件重命名为nodejs</font><blockquote>
 <p>sudo mv node-v10.15.3-linux-x64/ nodejs</p>
 </blockquote>
 </li>
-<li><p><font color="black" size="3">链接nodejs本身  </font></p>
-</li>
-<li><p>链接npm包管理器</p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-6.png" alt="upload successful"><br><img src="/images/pasted-8.png" alt="upload successful"> </p>
+<ul>
+<li><font color="black" size="3">链接nodejs本身  </font></li>
+<li>链接npm包管理器<blockquote>
 <p>sudo ln -s /usr/local/nodejs/bin/node /usr/local/bin<br>sudo ln -s /usr/local/nodejs/bin/npm /usr/local/bin</p>
 </blockquote>
 </li>
-<li><p><font color="black" size="3">查看nodejs的版本信息</font></p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-9.png" alt="upload successful"><br><img src="/images/pasted-10.png" alt="upload successful"> </p>
+<ul>
+<li><font color="black" size="3">查看nodejs的版本信息</font><blockquote>
 <p>node -v  </p>
 </blockquote>
-<p>————v10.15.3        </p>
 </li>
-<li><p><font color="black" size="3">查看npm的版本信息</font></p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-12.png" alt="upload successful"> </p>
+<ul>
+<li><font color="black" size="3">查看npm的版本信息</font><blockquote>
 <p>npm -v</p>
 </blockquote>
-<p>————-6.4.1</p>
 </li>
-<li><p><font color="black" size="3">下载安装cnpm（速度比较快）</font></p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-11.png" alt="upload successful">  </p>
+<ul>
+<li><font color="black" size="3">如果显示尚未安装，则执行</font><blockquote>
+<p>sudo apt install npm</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/images/pasted-13.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">下载安装cnpm（速度比较快）</font><blockquote>
 <p>sudo npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
 </blockquote>
 </li>
+</ul>
+<p><img src="/images/pasted-14.png" alt="upload successful"> </p>
+<ul>
 <li><p><font color="black" size="3">尝试输入 cnpm 查看是否安装成功，<br>如果成功，会显示根目录下的文件夹或者文件，<br>如果失败，则继续输入（查看cnpm安装的位置）：</font></p>
 <blockquote>
 <p>sudo find / -name cnpm</p>
@@ -229,21 +261,24 @@
 </li>
 <li><p><font color="black" size="3">链接cnpm</font></p>
 <blockquote>
-<p>sudo ln -s /usr/local/nodejs/lib/node_modules/cnpm/bin/cnpm /usr/local/bin/cnpm  </p>
+<p>sudo ln -s<br>/usr/local/nodejs/lib/node_modules/cnpm/bin/cnpm /usr/local/bin/cnpm  </p>
 </blockquote>
+<p> <img src="/images/pasted-15.png" alt="upload successful">   </p>
 </li>
 <li><p><font color="black" size="3">查看安装cnpm的版本信息</font></p>
 <blockquote>
 <p>cnpm -v</p>
 </blockquote>
 </li>
-<li><p><font color="black" size="3">使用cnpm来安装hexo博客框架</font></p>
-<blockquote>
+</ul>
+<p><img src="/images/pasted-16.png" alt="upload successful"> </p>
+<ul>
+<li><font color="black" size="3">使用cnpm来安装hexo博客框架</font><blockquote>
 <p>sudo cnpm install -g hexo-cli </p>
 </blockquote>
 </li>
 </ul>
-<p>至此Hexo博客的基本环境已经部署好了。  </p>
+<p><img src="/images/pasted-17.png" alt="upload successful"><br>至此Hexo博客的基本环境已经部署好了。  </p>
 <hr>
 <h4 id="2、初始化博客"><a href="#2、初始化博客" class="headerlink" title="2、初始化博客"></a>2、初始化博客</h4><ul>
 <li><p><font color="black" size="3">打开命令行，选择一个文件夹，创建你的博客存储文件夹（以后关于博客的书写删除，还有样式的配置等都在这个文件夹下操作）</font></p>
@@ -297,7 +332,7 @@
 </li>
 </ul>
 <hr>
-<h4 id="3、把个人博客部署到远端-Github"><a href="#3、把个人博客部署到远端-Github" class="headerlink" title="3、把个人博客部署到远端(Github)"></a>3、把个人博客部署到远端(Github)</h4><ul>
+<h3 id="二、把个人博客部署到远端-Github"><a href="#二、把个人博客部署到远端-Github" class="headerlink" title="二、把个人博客部署到远端(Github)"></a>二、把个人博客部署到远端(Github)</h3><ul>
 <li><p><font color="black" size="3">打开个人的Github主页，点击加号选择新建一个仓库（New repository）</font></p>
 <blockquote>
 <p>sudo hexo g    </p>
@@ -343,7 +378,7 @@
 </li>
 </ul>
 <hr>
-<h4 id="五、如何给博客换主题"><a href="#五、如何给博客换主题" class="headerlink" title="五、如何给博客换主题"></a>五、如何给博客换主题</h4><ul>
+<h3 id="三、如何给博客换主题"><a href="#三、如何给博客换主题" class="headerlink" title="三、如何给博客换主题"></a>三、如何给博客换主题</h3><ul>
 <li><p><font color="black" size="3">浏览器输入网址查看样式：</font></p>
 <blockquote>
 <p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a></p>
@@ -366,7 +401,7 @@
 </li>
 <li><p><font color="black" size="3">查看完后，推到远端</font></p>
 <blockquote>
-<p>sudo hexo d  </p>
+<p>sudo hexo d</p>
 </blockquote>
 </li>
 </ul>
