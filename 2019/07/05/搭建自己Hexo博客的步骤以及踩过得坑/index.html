@@ -29,7 +29,16 @@
 <meta property="og:image" content="http://yoursite.com/images/pasted-15.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-16.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-17.png">
-<meta property="og:updated_time" content="2019-07-07T15:16:44.860Z">
+<meta property="og:image" content="http://yoursite.com/images/pasted-27.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-28.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-26.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-19.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-21.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-22.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-23.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-24.png">
+<meta property="og:image" content="http://yoursite.com/images/pasted-25.png">
+<meta property="og:updated_time" content="2019-07-28T11:04:05.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建自己Hexo博客的步骤以及踩过的坑">
 <meta name="twitter:description" content="一、Hexo博客的本地搭建 选择博客框架：Hexo操作系统：Ubuntu16.04  1、部署环境 安装nodejs,下载长期支持版：Recommended For Most Users这个版本，下载链接   然后打开命令行，进入下载的目录执行如下命令，解压缩到 /usr/local目录下：  sudo tar xf node-v10.15.3-linux-x64.tar.xz -C">
@@ -245,14 +254,16 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="/images/pasted-13.png" alt="upload successful"></p>
+<img src="/images/pasted-13.png" width="700" height="180" div align="center">
+
 <ul>
 <li><font color="black" size="3">下载安装cnpm（速度比较快）</font><blockquote>
 <p>sudo npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
 </blockquote>
 </li>
 </ul>
-<p><img src="/images/pasted-14.png" alt="upload successful"> </p>
+<img src="/images/pasted-14.png" width="700" height="300" div align="center">
+
 <ul>
 <li><p><font color="black" size="3">尝试输入 cnpm 查看是否安装成功，<br>如果成功，会显示根目录下的文件夹或者文件，<br>如果失败，则继续输入（查看cnpm安装的位置）：</font></p>
 <blockquote>
@@ -261,7 +272,7 @@
 </li>
 <li><p><font color="black" size="3">链接cnpm</font></p>
 <blockquote>
-<p>sudo ln -s<br>/usr/local/nodejs/lib/node_modules/cnpm/bin/cnpm /usr/local/bin/cnpm  </p>
+<p>sudo ln -s /usr/local/nodejs/lib/node_modules/cnpm/bin/cnpm /usr/local/bin/cnpm  </p>
 </blockquote>
 <p> <img src="/images/pasted-15.png" alt="upload successful">   </p>
 </li>
@@ -278,7 +289,9 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="/images/pasted-17.png" alt="upload successful"><br>至此Hexo博客的基本环境已经部署好了。  </p>
+<img src="/images/pasted-17.png" width="700" height="580" div align="center">
+
+<p>至此Hexo博客的基本环境已经部署好了。  </p>
 <hr>
 <h4 id="2、初始化博客"><a href="#2、初始化博客" class="headerlink" title="2、初始化博客"></a>2、初始化博客</h4><ul>
 <li><p><font color="black" size="3">打开命令行，选择一个文件夹，创建你的博客存储文件夹（以后关于博客的书写删除，还有样式的配置等都在这个文件夹下操作）</font></p>
@@ -333,23 +346,19 @@
 </ul>
 <hr>
 <h3 id="二、把个人博客部署到远端-Github"><a href="#二、把个人博客部署到远端-Github" class="headerlink" title="二、把个人博客部署到远端(Github)"></a>二、把个人博客部署到远端(Github)</h3><ul>
-<li><p><font color="black" size="3">打开个人的Github主页，点击加号选择新建一个仓库（New repository）</font></p>
-<blockquote>
-<p>sudo hexo g    </p>
-</blockquote>
-</li>
-<li><p><font color="black" size="3">仓库的命名必须和自己的github账户一致（eg:AriesPengLin.github.io)</font></p>
-<blockquote>
-<p>sudo hexo g    </p>
-</blockquote>
-</li>
-<li><p><font color="black" size="3">然后点击创建仓库（Create repository）</font></p>
-<blockquote>
-<p>sudo hexo g    </p>
+<li><font color="black" size="3">打开个人的Github主页，点击加号选择新建一个仓库（New repository）</font></li>
+</ul>
+<p><img src="/images/pasted-27.png" alt="upload successful">    </p>
+<ul>
+<li><font color="black" size="3">仓库的命名必须和自己的github账户一致 ，然后点击创建仓库（Create repository）（eg:perlin14.github.io)</font><blockquote>
+<p>因为我之前创建过了，所以此处显示已经存在。    </p>
 </blockquote>
 </li>
 </ul>
-<p><font color="black" size="3">打开命令行进入部署博客的文件夹下（我这里是Hexoblog/）</font></p>
+<p><img src="/images/pasted-28.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">打开命令行进入部署博客的文件夹下（我这里是Hexoblog/）</font></li>
+</ul>
 <ul>
 <li><p><font color="black" size="3">下载安装git的部署插件，命令为：</font></p>
 <blockquote>
@@ -368,12 +377,12 @@
 </li>
 <li><p><font color="black" size="3">使用命令行部署到远端：</font></p>
 <blockquote>
-<p>sudo hexllllo d</p>
+<p>sudo hexo d</p>
 </blockquote>
 </li>
 <li><p><font color="black" size="3">报错： spawn git ENOENT</font></p>
 <blockquote>
-<p>配置git环境 <a href="https://blog.csdn.net/idomyway/article/details/81975980" target="_blank" rel="noopener">https://blog.csdn.net/idomyway/article/details/81975980</a></p>
+<p>配置git环境 参考 <a href="https://blog.csdn.net/idomyway/article/details/81975980" target="_blank" rel="noopener">https://blog.csdn.net/idomyway/article/details/81975980</a></p>
 </blockquote>
 </li>
 </ul>
@@ -394,10 +403,7 @@
 <p>sudo vim _config.yml</p>
 </blockquote>
 </li>
-<li><p><font color="black" size="3">然后执行</font></p>
-<blockquote>
-<p>sodu hexo clean<br>sudo hexo g<br>sudo hexo s  </p>
-</blockquote>
+<li><p><font color="black" size="3">然后执行</font>sodu hexo clean  sudo hexo g  sudo hexo s  </p>
 </li>
 <li><p><font color="black" size="3">查看完后，推到远端</font></p>
 <blockquote>
@@ -405,6 +411,65 @@
 </blockquote>
 </li>
 </ul>
+<hr>
+<h3 id="四、Hexo-Admin插件管理"><a href="#四、Hexo-Admin插件管理" class="headerlink" title="四、Hexo Admin插件管理"></a>四、Hexo Admin插件管理</h3><p>Hexo在本地写文章看不到效果，使用Hexo Admin插件可以较为容易的立刻预览到博客的效果，另外还可以很容易的将截屏存到剪切板的图片直接粘贴到编写的文本中，下面就讲述一下如何配置Hexo Admin插件。  </p>
+<ul>
+<li><p><font color="black" size="3">安装插件</font></p>
+<blockquote>
+<p>sodu npm install –save hexo-admin</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">启动博客</font></p>
+<blockquote>
+<p>sodu hexo s</p>
+</blockquote>
+</li>
+<li><p><font color="black" size="3">浏览器访问localhost:4000/admin。</font></p>
+<blockquote>
+<p>效果如下：</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/images/pasted-26.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">配置admin</font><blockquote>
+<p>为了安全，不能让所有人访问这个地址都能够有admin的权限，我们需要添加用户名与密码，<br>在localhost:4000/admin/网站中点击右上角的settings，<br>然后点击下面的 Setup authentification here 。  </p>
+</blockquote>
+</li>
+</ul>
+<img src="/images/pasted-19.png" width="900" height="600" div align="center">
+  >效果如下：  
+
+<p><img src="/images/pasted-21.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">填写好用户名与密码，还有secret。</font><blockquote>
+<p>效果如下:</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/images/pasted-22.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">然后我们可以看到后面加密后的信息，我们需要复制粘贴到配置文件中去。</font><blockquote>
+<p>如图所示：</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/images/pasted-23.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">把这些信息全部都复制粘贴到项目的核心配置文件test/_config.yml中，粘贴到最后面即可。</font>
+>如图:
+
+</li>
+</ul>
+<p><img src="/images/pasted-24.png" alt="upload successful"></p>
+<ul>
+<li><font color="black" size="3">保存后重新运行hexo，查看localhost:4000/admin，即可看到效果。</font><blockquote>
+<p>如图所示：</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/images/pasted-25.png" alt="upload successful"></p>
+<p>这样Hexo Admin插件就配置好了，然后输入用户名和密码，登录后就可以进行博客的编写了。</p>
 
       
 
