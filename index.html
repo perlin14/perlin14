@@ -474,19 +474,19 @@
 
 
   
-    <article id="post-测试文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-数据库课程课后学习的小结（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/02/测试文章/">测试文章</a>
+      <a class="article-title" href="/2019/07/02/数据库课程课后学习的小结（一）/">数据库课程课后学习的小结（一）</a>
     </h1>
   
 
         
-        <a href="/2019/07/02/测试文章/" class="archive-article-date">
+        <a href="/2019/07/02/数据库课程课后学习的小结（一）/" class="archive-article-date">
   	<time datetime="2019-07-02T06:05:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
 </a>
         
@@ -494,13 +494,95 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <h3 id="一、数据库以及运行环境"><a href="#一、数据库以及运行环境" class="headerlink" title="一、数据库以及运行环境"></a>一、数据库以及运行环境</h3><p>数据库：SQL Server 2008R2<br>操作系统：Windows 10<br>简介：这是数据库老师布置的作业，放到此处用来平常自己的复习查看，也用来一个阶段的总结。<br>此处是关于数据库banking。</p>
 <hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
+<h3 id="二、数据库介绍以及E-R图"><a href="#二、数据库介绍以及E-R图" class="headerlink" title="二、数据库介绍以及E-R图"></a>二、数据库介绍以及E-R图</h3><p>基于《数据库系统概念》（第五版）中的Banking数据库样例，结合自己的上机实践，完成数据库概念设计（E-R图）、逻辑设计、事务设计、过程设计、编程实现。  </p>
+<p>说明：</p>
+<p><img src="/images/pasted-30.png" alt="upload successful"></p>
+<p><font color="black" size="3" text-aligen="center">banking数据库的E-R图</font></p>
+<p><img src="/images/pasted-31.png" alt="upload successful">  </p>
+<p><font color="black" size="3" text-aligen="center">由Banking系统E-R图，根据转换规则，得到如下关系模式：</font></p>
+<p><img src="/images/pasted-32.png" alt="upload successful"></p>
 <hr>
-<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>内容</p>
+<h3 id="三、数据库表的创建"><a href="#三、数据库表的创建" class="headerlink" title="三、数据库表的创建"></a>三、数据库表的创建</h3><p>创建各个表的详细参数：</p>
+<p><img src="/images/pasted-39.png" alt="upload successful"></p>
+<p><img src="/images/pasted-38.png" alt="upload successful"></p>
 <hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>perlin14</p>
+<h3 id="四、关于此数据库的部分操作以及执行结果"><a href="#四、关于此数据库的部分操作以及执行结果" class="headerlink" title="四、关于此数据库的部分操作以及执行结果"></a>四、关于此数据库的部分操作以及执行结果</h3><h6 id="1、插入数据"><a href="#1、插入数据" class="headerlink" title="1、插入数据"></a>1、插入数据</h6><ul>
+<li><font color="black" size="3">基本的格式为：</font><blockquote>
+<p>INSERT INTO branch(插入的表名) VALUES (‘Downtown（对应的表中创建顺序的键值）’,’Brooklyn（对应的表中创建顺序的键值’,’710000（对应的表中创建顺序的键值’);</p>
+</blockquote>
+</li>
+</ul>
+<p>banking数据库的首次数据插入详细（后面可能会对其中的内容因为一些操作稍作更改）：</p>
+<p><img src="/images/pasted-40.png" alt="upload successful"></p>
+<p><img src="/images/pasted-41.png" alt="upload successful"></p>
+<h6 id="2、查表全部数据"><a href="#2、查表全部数据" class="headerlink" title="2、查表全部数据"></a>2、查表全部数据</h6><ul>
+<li><font color="black" size="3">基本的格式为：</font><blockquote>
+<p>SELECT * FROM Branch(表名);</p>
+</blockquote>
+</li>
+</ul>
+<p>对banging数据库的各个表的数据查询语句以及结果依次如下所示：</p>
+<ul>
+<li><p>SELECT * FROM Branch;<br><img src="/images/pasted-42.png" alt="upload successful"></p>
+</li>
+<li><p>SELECT * FROM customer;<br><img src="/images/pasted-43.png" alt="upload successful"></p>
+</li>
+<li><p>SELECT * FROM account;<br><img src="/images/pasted-44.png" alt="upload successful"></p>
+</li>
+</ul>
+<p><img src="/images/pasted-49.png" alt="upload successful"></p>
+<ul>
+<li><p>SELECT * FROM depositor;<br><img src="/images/pasted-45.png" alt="upload successful"></p>
+</li>
+<li><p>SELECT * FROM loan;<br><img src="/images/pasted-46.png" alt="upload successful"></p>
+</li>
+<li><p>SELECT * FROM borrower;<br><img src="/images/pasted-47.png" alt="upload successful"></p>
+</li>
+</ul>
+<h6 id="2、查找更新操作"><a href="#2、查找更新操作" class="headerlink" title="2、查找更新操作"></a>2、查找更新操作</h6><p>对banging数据库的各个表的数据查找更新语句以及结果依次如下所示：  </p>
+<p><img src="/images/pasted-50.png" alt="upload successful">  </p>
+<ul>
+<li>用来查找borrower表和loan表中loan-number相同的数据的customer_name,loan_number,amount值（自己对比校验一下，结果正确）。其中，AS：对表名重命名成简单的名称（表名 AS 新名称）；.（点）：表名.属性 用来调用不同表却有相同名称的属性，用来区分。</li>
+</ul>
+<p><img src="/images/pasted-51.png" alt="upload successful"></p>
+<ul>
+<li>查找branch表中比Brookly城市中资金最少的银行资金多的branch_name。</li>
+</ul>
+<p><img src="/images/pasted-52.png" alt="upload successful"></p>
+<ul>
+<li>将branch表中资金为3700000的修改为50000，（修改的用法：update 表名 set 设置的新值 where 约束;）</li>
+</ul>
+<p><img src="/images/pasted-53.png" alt="upload successful"></p>
+<ul>
+<li>查找branch表中比Brookly城市中资金最少的银行资金多的branch_name（对比未修改时少一项），其中SQL SELECT DISTINCT 语句，在表中，可能会包含重复值。这并不成问题，不过，有时您也许希望仅仅列出不同（distinct）的值。关键词 DISTINCT 用于返回唯一不同的值。<br>语法：SELECT DISTINCT 列名称 FROM 表名称</li>
+</ul>
+<p><img src="/images/pasted-54.png" alt="upload successful"></p>
+<ul>
+<li>本次修改中用到了嵌套，用来将loan表中loan_number为L-23的branch_name所对应的银行的amount修改为888,（由前后对比就可以看出）。</li>
+</ul>
+<p><img src="/images/pasted-55.png" alt="upload successful"></p>
+<ul>
+<li>找出borrower表和loan表中loan_number相同并且branch_name是Perryridge的customer_name。其中，ORDER BY 语句用于根据指定的列对结果集进行排序。ORDER BY 语句默认按照升序对记录进行排序。如果您希望按照降序对记录进行排序，可以使用 DESC 关键字。<br>SELECT Company, OrderNumber FROM Orders ORDER BY Company;<br>SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC;</li>
+</ul>
+<p><img src="/images/pasted-56.png" alt="upload successful"></p>
+<ul>
+<li>UNION 操作符用于合并两个或多个 SELECT 语句的结果集。请注意，UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。<br>默认地，UNION 操作符选取不同的值。如果允许重复的值，请使用 UNION ALL。<br>另外，UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句中的列名。<br>UNION 命令只会选取不同的值。</li>
+</ul>
+<p><img src="/images/pasted-57.png" alt="upload successful"></p>
+<ul>
+<li>查找depositor和account表中account_number相同的branch_name和对应customer_name的个数。<br>此处，GROUP BY必须得配合聚合函数来用，分组之后你可以计数（COUNT），求和（SUM），求平均数（AVG）等。</li>
+</ul>
+<p><img src="/images/pasted-58.png" alt="upload successful"></p>
+<ul>
+<li>得到account表中branch_name是Perryridge的balance的平均值。<br>AVG：计算该列的平均值。</li>
+</ul>
+<p><img src="/images/pasted-59.png" alt="upload successful"></p>
+<ul>
+<li>得到account表中balance大于800的branch_name以及相对应的平均值。<br>当然提到GROUP BY 我们就不得不提到HAVING，HAVING相当于条件筛选，但它与WHERE筛选不同，HAVING是对于GROUP BY对象进行筛选。</li>
+</ul>
+<hr>
 
       
 
@@ -513,7 +595,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/02/测试文章/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/02/数据库课程课后学习的小结（一）/">展开全文 >></a>
         </p>
       
 
